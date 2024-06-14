@@ -61,8 +61,14 @@ def main():
     host_original = args.host
 
     # Remove protocol and any pages in case provided
-    args.host = args.host.split("://")[1]
-    args.host = args.host.split("/")[0]
+    try:
+        args.host = args.host.split("://")[1]
+    except: 
+        pass
+    try:
+        args.host = args.host.split("/")[0]
+    except: 
+        pass
 
     # Retrieve the destination SSL certificate
     certificate = get_certificate(args.host, args.port, args.timeout)
