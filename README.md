@@ -6,17 +6,17 @@ The script parameters should be provided as CLI arguments.
 
 ## Prerequisites:
 
-OpenSSL (tested with v24.1.0) module needs to be installed prior using the tool.
+* OpenSSL (tested with v24.1.0)
 
-How to install:
-```sh
-pip install pyOpenSSL==24.1.0
-```
+>How to install:
+>```sh
+>pip install pyOpenSSL==24.1.0
+>```
 
 ## Syntax:
 
 ```txt
-python certificate-exp-date-checker.py --host <target_host> --port <target_port> --timeout <timeout_seconds>
+python certificate_exp_date_checker.py --host <target_host> --port <target_port> --timeout <timeout_seconds>
 ```
 
 ### Arguments
@@ -34,18 +34,20 @@ _Request timeout. If not specified, 10 seconds is taken as default_
 
 ## Examples:
 
+### Input
 ```sh
 python certificate-exp-date-checker.py --host 192.168.0.1
 ```
-
+### Output
 ```txt
 SSL certificate's expiration date of 192.168.0.1 is: 2025-03-07 23:59:59
 ```
 
+### Input
 ```sh
 python certificate-exp-date-checker.py --host example.com --port 8443 --timeout 5
 ```
-
+### Output
 ```txt
 SSL certificate's expiration date of example.com is: 2025-03-07 23:59:59
 ```
