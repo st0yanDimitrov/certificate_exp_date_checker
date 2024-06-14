@@ -17,7 +17,7 @@ def get_certificate(host, port, timeout) -> str:
     try:
         cert_pem: str  = ssl.get_server_certificate((host, port), timeout=timeout)
     except Exception as e:
-        print (f"A certificate at address {host} couldn't be retreived. {str(e)}")
+        print (f"A certificate at address {host} couldn't be retrieved. {str(e)}")
         sys.exit(1)
     else:
         return cert_pem
@@ -29,7 +29,7 @@ def get_certicicate_expiration_date(cert) -> str:
     try: 
         cert_x509 = crypto.load_certificate(crypto.FILETYPE_PEM, cert)
     except Exception as e:
-        print(f"There was an issue with the retreived certificate. {str(e)}")
+        print(f"There was an issue with the retrieved certificate. {str(e)}")
         sys.exit(1)
     else:
         
