@@ -57,9 +57,6 @@ def main():
     # Get input arguments from CLI
     args: InputArgs = get_arguments()
 
-    # Kepp the original host input for the result message
-    host_original = args.host
-
     # Remove protocol and any pages in case provided
     try:
         args.host = args.host.split("://")[1]
@@ -77,7 +74,7 @@ def main():
     result =  get_certicicate_expiration_date(certificate)
 
     # Print the result to CLI
-    print(f"SSL certificate's expiration date of {host_original} is: {result}")
+    print(f"SSL certificate's expiration date of {args.host} is: {result}")
 
 if __name__=="__main__":
     main()
