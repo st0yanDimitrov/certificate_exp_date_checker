@@ -1,4 +1,4 @@
-# sap-certificate-exp-date-checker
+# certificate_exp_date_checker
 SAP task - Certificate Expiry Date Checker
 
 The purpose of this script is to retrieve the SSL/TLS certificate's expiration date of a provided host address (could be either URL or IP address)
