@@ -77,5 +77,6 @@ def main():
     print(f"SSL certificate's expiration date of {args.host} is: {result}")
     sys.exit(0)
 
+
 if __name__=="__main__":
     main()
