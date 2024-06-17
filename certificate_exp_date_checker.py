@@ -23,7 +23,7 @@ def get_certificate(host, port, timeout) -> str:
         return cert_pem
 
 
-def get_certicicate_expiration_date(cert) -> str:
+def get_certificate_expiration_date(cert) -> str:
     
     # Decrypt the input public key
     try: 
@@ -71,10 +71,11 @@ def main():
     certificate = get_certificate(args.host, args.port, args.timeout)
     
     # Extract certificate"s expiration date
-    result =  get_certicicate_expiration_date(certificate)
+    result =  get_certificate_expiration_date(certificate)
 
     # Print the result to CLI
     print(f"SSL certificate's expiration date of {args.host} is: {result}")
+    sys.exit(0)
 
 if __name__=="__main__":
     main()
